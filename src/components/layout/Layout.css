@@ -1,0 +1,35 @@
+ul#nav li{
+    display: inline;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.header{
+    display:block;
+font-family: sans-serif;
+font-size: 25px;
+overflow: hidden;
+color: #000;
+text-align:  center;
+margin-top: 25px;
+}
+
+.content{
+    display: block;
+    width: 80%;
+    padding: 20%;
+    margin-top: 20%;
+    margin-bottom: 30%;
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+.footer{
+    display: block;
+    margin-top: auto;
+}
