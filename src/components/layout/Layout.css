@@ -8,6 +8,14 @@ ul#nav li{
     padding-inline-start: 40px;
 }
 
+div#loop{
+    font-family: sans-serif;
+    font-size: 25px; 
+}
+span#loop{
+    font-weight: bold;
+}
+/* 
 .header{
     display:block;
 font-family: sans-serif;
@@ -32,4 +40,4 @@ margin-top: 25px;
 .footer{
     display: block;
     margin-top: auto;
-}
+} */
