@@ -17,8 +17,9 @@ export const Content = () => {
                 <TextLoop className="greeting">
                     <span>Hello,</span>
                     <span>Hola,</span>
-                    <span>Bonjour,</span>
                     <span>Salam,</span>
+                    <span>Bonjour,</span>
+                    <span>Namaste,</span>
                 </TextLoop> I am an undergraduate student at Lawrence University where I enjoy learning about Computer Science and Philosophy. I am advised by <b>Joe Gregg</b> and <b>Mark Phelan</b>.</p>
             <p className="bio"><a href="./google"><u id="scroll">Scroll down</u></a> to see some of the projects I've been working on.</p>
             <p>
