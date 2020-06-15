@@ -5,16 +5,20 @@ import {Grid} from  '@material-ui/core/';
 import {Footer} from './components/layout/Footer';
 
 export const App = () =>  (
-  <Grid container className="App" justify="flex-start" alignItems="stretch" direction="column" spacing={3}>
-    <Grid item >
-      <Header />
-    </Grid>
-    <Grid item>
+  <div>
+     <Grid container className="App" justify="flex-end" alignItems="flex-start" direction="row" >
+   <Header />  
+  </Grid>
+    <Grid container className="App" justify="flex-start" alignItems="center" direction="column" >
+    <Grid item xs={8}>
       <Content />
     </Grid>
     <Grid item>
       <Footer />
     </Grid>
   </Grid>
+  </div>
+ 
+  
  );
 
