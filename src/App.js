@@ -2,7 +2,9 @@ import React from 'react';
 import {Header} from './components/layout/Header';
 import {Content} from './components/layout/Content';
 import {Grid} from  '@material-ui/core/';
-import {Footer} from './components/layout/Footer';
+import {ProjectCard} from './components/layout/ProjectCard';
+import {ProjectLabel} from './components/layout/ProjectLabel';
+import {ProjectRow} from './components/layout/ProjectRow';
 
 export const App = () =>  (
   <div>
@@ -14,7 +16,8 @@ export const App = () =>  (
       <Content />
     </Grid>
     <Grid item>
-      <Footer />
+      <ProjectLabel />
+      <ProjectRow />
     </Grid>
   </Grid>
   </div>

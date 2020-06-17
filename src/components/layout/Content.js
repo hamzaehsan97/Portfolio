@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core';
 import { SocialIcon } from 'react-social-icons';
 import { bounce } from 'react-animations';
 import styled, { keyframes } from 'styled-components';
-
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export const Content = () => {
 
@@ -21,7 +21,17 @@ export const Content = () => {
                     <span>Bonjour,</span>
                     <span>Namaste,</span>
                 </TextLoop> I am an undergraduate student at Lawrence University where I enjoy learning about Computer Science and Philosophy. I am advised by <b>Joe Gregg</b> and <b>Mark Phelan</b>.</p>
-            <p className="bio"><a href="./google"><u id="scroll">Scroll down</u></a> to see some of the projects I've been working on.</p>
+            <p className="bio">
+                <Link 
+                activeClass="active"
+                to="projectTitle"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration= {500}
+            ><u>Scroll down</u>
+               
+            </Link> to see some of the projects I've been working on.</p>
             <p>
                 <span id="icons">
                     <SocialIcon url="https://github.com/hamzaehsan97" />
