@@ -1,4 +1,5 @@
 # Portfolio
-This repository contains code to my personal portfolio
+This repository contains code to my personal portfolio site
 
-Here is a link to my portfolio: hamzaehsan97.github.io/Portfolio/
+# Link
+[Link to my Portfolio site](hamzaehsan97.github.io/Portfolio/)
