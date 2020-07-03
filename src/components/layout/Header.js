@@ -1,6 +1,12 @@
 import React from "react";
 import "./Layout.css";
 import { Grid } from "@material-ui/core";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 export const Header = () => {
   // eslint-disable-next-line
@@ -25,7 +31,7 @@ export const Header = () => {
       <Grid item>
         <ul id="nav2">
           <li>
-            <b>Resume</b>
+            <Link to="/resume" style={{ textDecoration: 'none' , color: 'black'}}><b>Resume</b></Link>
           </li>
         </ul>
       </Grid>

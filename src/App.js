@@ -1,13 +1,18 @@
-import React from "react";
+import React, { Component } from "react";
 import { Header } from "./components/layout/Header";
 import { Content } from "./components/layout/Content";
 import { Grid } from "@material-ui/core/";
 import { ProjectCard } from "./components/layout/ProjectCard";
 import { ProjectLabel } from "./components/layout/ProjectLabel";
 import { ProjectRow } from "./components/layout/ProjectRow";
+import ReactDOM from 'react-dom';
+import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
 
-export const App = () => (
-  <div>
+
+class App extends Component{
+  render(){
+    return(
+        <div>
     <Grid
       container
       className="App"
@@ -33,4 +38,10 @@ export const App = () => (
       </Grid>
     </Grid>
   </div>
-);
+    );
+  }
+}
+
+export default App;
+
+
