@@ -23,7 +23,7 @@ export const ProjectRow = (props) => {
         justify="flex-end"
         alignItems="flex-start"
         direction="row"
-        spacing={6}
+        spacing={4}
       >
         <Grid item>
           <Grid
