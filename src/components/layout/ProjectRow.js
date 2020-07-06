@@ -22,7 +22,7 @@ export const ProjectRow = (props) => {
         className="App"
         justify="flex-end"
         alignItems="flex-start"
-        direction="column"
+        direction="row"
         spacing={6}
       >
         <Grid item>
@@ -31,7 +31,7 @@ export const ProjectRow = (props) => {
             className="App"
             justify="flex-end"
             alignItems="flex-start"
-            direction="row"
+            direction="column"
             spacing={6}
           >
             <Grid item>
@@ -72,7 +72,7 @@ export const ProjectRow = (props) => {
             className="App"
             justify="flex-end"
             alignItems="flex-start"
-            direction="row"
+            direction="column"
             spacing={6}
           >
             <Grid item>
@@ -113,7 +113,7 @@ export const ProjectRow = (props) => {
             className="App"
             justify="flex-end"
             alignItems="flex-start"
-            direction="row"
+            direction="column"
             spacing={6}
           >
             <Grid item>
