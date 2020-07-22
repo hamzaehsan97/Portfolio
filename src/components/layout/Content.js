@@ -23,7 +23,7 @@ export const Content = () => {
           <span>Bonjour,</span>
           <span>Namaste,</span>
         </TextLoop>{" "}
-        I am an undergraduate student at Lawrence University where I enjoy
+        I am a senior at Lawrence University where I enjoy
         learning about Computer Science and Philosophy. I am advised by{" "}
         <b>Joe Gregg</b> and <b>Mark Phelan</b>.
       </p>

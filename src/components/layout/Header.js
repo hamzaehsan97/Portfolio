@@ -17,7 +17,8 @@ export const Header = () => {
         <ul id="nav">
           {" "}
           <li>
-            <b>CS</b>
+            
+            <Link to="/cs" style={{ textDecoration: 'none' , color: 'black'}}><b>CS</b></Link>
           </li>{" "}
         </ul>
       </Grid>

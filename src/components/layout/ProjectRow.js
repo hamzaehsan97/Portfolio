@@ -60,7 +60,7 @@ export const ProjectRow = (props) => {
                   name: "Hotline",
                   description:
                     "Hotline is a React based real estate platform focused to the needs of south asian real estate markets. The project was built using React, Node.JS, Firebase and MongoDB.",
-                  url: "https://github.com/hamzaehsan97/Hotline",
+                  url: "https://hotlineassociates.netlify.app/",
                 }}
               />
             </Grid>

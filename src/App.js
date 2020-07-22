@@ -5,6 +5,7 @@ import { Grid } from "@material-ui/core/";
 import { ProjectCard } from "./components/layout/ProjectCard";
 import { ProjectLabel } from "./components/layout/ProjectLabel";
 import { ProjectRow } from "./components/layout/ProjectRow";
+import Cs from "./components/Cs";
 import ReactDOM from 'react-dom';
 import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
 
@@ -32,6 +33,7 @@ class App extends Component{
       <Grid item xs={8}>
         <Content />
       </Grid>
+  
       <Grid item>
         <ProjectLabel />
         <ProjectRow />
