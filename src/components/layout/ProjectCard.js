@@ -49,9 +49,9 @@ export const ProjectCard = (props) => {
     <div>
       {/* Container for Projects */}
       <Card className={classes.root} variant="outlined" id="1">
-        <CardHeader title={props.project.name}></CardHeader>
+        <CardHeader title={props.project.name} className="underline--magical" ></CardHeader>
         <CardContent>
-          <Typography variant="body2" component="p">
+          <Typography variant="body2" component="p" >
             {props.project.description}
           </Typography>
         </CardContent>
