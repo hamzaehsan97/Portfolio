@@ -46,15 +46,15 @@ class Cs extends Component {
                 </Grid>
               </Grid>
               <Grid item>
-                <a>
-                  https://www.uml.edu/innovation-entrepreneurship/differencemaker/meet-the-differencemakers/ev-smart.aspx
+                <a href="https://www.uml.edu/innovation-entrepreneurship/differencemaker/meet-the-differencemakers/ev-smart.aspx">
+                  Press: University Massachusetts Differencemaker Competition
                 </a>
-                <a>
-                  https://blogs.lawrence.edu/news/2019/04/lawrence-student-finishes-a-strong-second-in-third-annual-pitch-competition.html
-                </a>
+
               </Grid>
               <Grid item>
-                <UndrawDesigner hairColor="black" skinColor="#C68642" />
+                                <a href="https://blogs.lawrence.edu/news/2019/04/lawrence-student-finishes-a-strong-second-in-third-annual-pitch-competition.html">
+                  Press: The Pitch Competition, Green Bay
+                </a>{/* <UndrawDesigner hairColor="black" skinColor="#C68642" /> */}
               </Grid>
             </Grid>
           </Grid>
