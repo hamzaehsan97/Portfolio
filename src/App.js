@@ -6,44 +6,43 @@ import { ProjectCard } from "./components/layout/ProjectCard";
 import { ProjectLabel } from "./components/layout/ProjectLabel";
 import { ProjectRow } from "./components/layout/ProjectRow";
 import Cs from "./components/Cs";
-import ReactDOM from 'react-dom';
-import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
+import ReactDOM from "react-dom";
+import { Router, Route, Link, browserHistory, IndexRoute } from "react-router";
 
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Grid
+          container
+          className="App"
+          justify="flex-end"
+          alignItems="flex-start"
+          direction="row"
+        >
+          <Header />
+        </Grid>
 
-class App extends Component{
-  render(){
-    return(
-        <div>
-    <Grid
-      container
-      className="App"
-      justify="flex-end"
-      alignItems="flex-start"
-      direction="row"
-    >
-      <Header />
-    </Grid>
-    <Grid
-      container
-      className="App"
-      justify="flex-start"
-      alignItems="center"
-      direction="column"
-    >
-      <Grid item xs={8}>
-        <Content />
-      </Grid>
-  
-      <Grid item>
-        <ProjectLabel />
-        <ProjectRow />
-      </Grid>
-    </Grid>
-  </div>
+        <Grid container direction="row" alignItems="flex-start">
+          <Grid item xs={12} className="content">
+            <Content />
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          className="App"
+          justify="flex-start"
+          alignItems="center"
+          direction="column"
+        >
+          <Grid item>
+            <ProjectLabel />
+            <ProjectRow />
+          </Grid>
+        </Grid>
+      </div>
     );
   }
 }
 
 export default App;
-
-

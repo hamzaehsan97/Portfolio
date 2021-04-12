@@ -80,7 +80,6 @@ export const LifeTabs = (props) => {
             className={classes.labelText}
             label="Cooking"
             {...a11yProps(2)}
-            disabled
           />
         </Tabs>
       </Paper>
@@ -92,7 +91,7 @@ export const LifeTabs = (props) => {
         <Reading />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Coming soon
+        <Typography variant="h1">Coming soon</Typography>
       </TabPanel>
     </div>
   );

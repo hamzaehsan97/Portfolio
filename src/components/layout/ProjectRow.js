@@ -37,7 +37,7 @@ export const ProjectRow = (props) => {
             <Grid item>
               <ProjectCard
                 project={{
-                  name: "Sandy cunt",
+                  name: "Computer Vision Automous Drone",
                   description:
                     "Computer Vision based autonomous drone (Tello). Programed in python and python based computer vision/ machine learning libraries.",
                   url: "https://github.com/hamzaehsan97/AI_Rescue_Drone",
