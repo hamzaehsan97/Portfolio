@@ -21,22 +21,22 @@ export const Content = () => {
         <Grid item>
           <p className="bio">
             <TextLoop className="greeting" style={{ color: "#3EB489" }}>
-              <span style={{ color: "#3EB489" }}> Hello,</span>
-              <span style={{ color: "#3EB489" }}> Hola,</span>
-              <span style={{ color: "#3EB489" }}> Salam,</span>
-              <span style={{ color: "#3EB489" }}> Bonjour,</span>
-              <span style={{ color: "#3EB489" }}>
-                0110100001100101011011000110110001101111,
-              </span>
+              <span style={{ color: "#3EB489" }}> hello,</span>
+              <span style={{ color: "#3EB489" }}> hola,</span>
+              <span style={{ color: "#3EB489" }}> salam,</span>
+              <span style={{ color: "#3EB489" }}> bonjour,</span>
+              <span style={{ color: "#3EB489" }}> howdy,</span>
             </TextLoop>{" "}
             my name is{" "}
           </p>
         </Grid>
         <Grid item className="bounce">
           <Bounce>
-            <h1 id="greeting">
+            <h1 id="greeting" style={{ marginBottom: "-5px" }}>
               Hamza Ehsan.
-              <br />I build things for the web.
+            </h1>
+            <h1 id="greeting" style={{ marginTop: "1px", color: "#303030" }}>
+              I build things for the web.
             </h1>
           </Bounce>
         </Grid>

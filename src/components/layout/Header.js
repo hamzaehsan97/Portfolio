@@ -1,6 +1,6 @@
 import React from "react";
 import "./Layout.css";
-import { Grid } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const onMouseOver = (event) => {
@@ -17,7 +17,13 @@ const onMouseOut = (event) => {
 
 export const Header = () => {
   // eslint-disable-next-line
-  const x = 1;
+  const styles = {
+    fontSize: 22 + "px",
+    "@media (max-width: 500px)": {
+      display: "none",
+    },
+  };
+
   return (
     <Grid container direction="row" justify="flex-end">
       <Grid item>
@@ -25,15 +31,48 @@ export const Header = () => {
           {" "}
           <li>
             <Link to="/cs" style={{ textDecoration: "none", color: "#3EB489" }}>
-              0.{" "}
-              <b
-                style={{ textDecoration: "none", color: "black" }}
-                onMouseEnter={(event) => onMouseOver(event)}
-                onMouseOut={(event) => onMouseOut(event)}
+              <Typography
+                variant="overline"
+                display="block"
+                gutterBottom
+                style={styles}
+              >
+                0.{" "}
+                <b
+                  style={{ textDecoration: "none", color: "black" }}
+                  onMouseEnter={(event) => onMouseOver(event)}
+                  onMouseOut={(event) => onMouseOut(event)}
+                >
+                  {" "}
+                  About
+                </b>
+              </Typography>
+            </Link>
+          </li>{" "}
+        </ul>
+      </Grid>
+      <Grid item>
+        <ul id="nav">
+          {" "}
+          <li>
+            <Link to="/cs" style={{ textDecoration: "none", color: "#3EB489" }}>
+              <Typography
+                variant="overline"
+                display="block"
+                gutterBottom
+                style={styles}
               >
                 {" "}
-                CS
-              </b>
+                01.{" "}
+                <b
+                  style={{ textDecoration: "none", color: "black" }}
+                  onMouseEnter={(event) => onMouseOver(event)}
+                  onMouseOut={(event) => onMouseOut(event)}
+                >
+                  {" "}
+                  Coding
+                </b>
+              </Typography>
             </Link>
           </li>{" "}
         </ul>
@@ -48,17 +87,25 @@ export const Header = () => {
                 color: "#3EB489",
               }}
             >
-              01.{" "}
-              <b
-                style={{
-                  textDecoration: "none",
-                  color: "black",
-                }}
-                onMouseEnter={(event) => onMouseOver(event)}
-                onMouseOut={(event) => onMouseOut(event)}
+              <Typography
+                variant="overline"
+                display="block"
+                gutterBottom
+                style={styles}
               >
-                Life
-              </b>
+                {" "}
+                02.{" "}
+                <b
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                  onMouseEnter={(event) => onMouseOver(event)}
+                  onMouseOut={(event) => onMouseOut(event)}
+                >
+                  Life
+                </b>
+              </Typography>
             </Link>
           </li>
         </ul>
@@ -68,17 +115,26 @@ export const Header = () => {
           <li>
             <Link
               to="/resume"
-              style={{ textDecoration: "none", color: "#3EB489" }}
+              style={{
+                textDecoration: "none",
+                color: "#3EB489",
+              }}
             >
-              {" "}
-              02.{" "}
-              <b
-                style={{ textDecoration: "none", color: "black" }}
-                onMouseEnter={(event) => onMouseOver(event)}
-                onMouseOut={(event) => onMouseOut(event)}
+              <Typography
+                variant="overline"
+                display="block"
+                gutterBottom
+                style={styles}
               >
-                Resume
-              </b>
+                03.{" "}
+                <b
+                  style={{ textDecoration: "none", color: "black" }}
+                  onMouseEnter={(event) => onMouseOver(event)}
+                  onMouseOut={(event) => onMouseOut(event)}
+                >
+                  Resume
+                </b>
+              </Typography>
             </Link>
           </li>
         </ul>
