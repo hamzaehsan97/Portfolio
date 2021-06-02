@@ -30,7 +30,7 @@ export const Header = () => {
         <ul id="nav">
           {" "}
           <li>
-            <Link to="/cs" style={{ textDecoration: "none", color: "#3EB489" }}>
+            <Link to="/" style={{ textDecoration: "none", color: "#3EB489" }}>
               <Typography
                 variant="overline"
                 display="block"
