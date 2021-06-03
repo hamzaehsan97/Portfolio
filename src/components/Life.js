@@ -8,7 +8,7 @@ import {
   UndrawDesigner,
   UndrawResponsive,
 } from "react-undraw-illustrations";
-
+import "./layout/Layout.css";
 class Life extends Component {
   render() {
     return (
@@ -31,6 +31,7 @@ class Life extends Component {
             alignItems="center"
             direction="column"
             style={{ paddingTop: 5 + "%" }}
+            className="content"
           >
             <Grid item>
               <Typography variant="h2">What is Hamza upto?</Typography>

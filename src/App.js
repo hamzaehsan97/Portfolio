@@ -24,7 +24,7 @@ class App extends Component {
         </Grid>
 
         <Grid container direction="row" alignItems="flex-start">
-          <Grid item xs={12} className="content">
+          <Grid item xs={12} className="content-extended-padding">
             <Content />
           </Grid>
         </Grid>

@@ -8,7 +8,7 @@ import {
   UndrawResponsive,
 } from "react-undraw-illustrations";
 import styled from "styled-components";
-
+import "./layout/Layout.css";
 const styles = {
   paddingTop: 5 + "%",
   "@media (max-width: ${({ theme }) => theme.mobile})": {
@@ -20,7 +20,7 @@ class Cs extends Component {
     return (
       <>
         {" "}
-        <div style={styles}>
+        <div className="content" style={styles}>
           <Grid
             container
             className="App"

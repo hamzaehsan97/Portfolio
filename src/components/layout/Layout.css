@@ -2,7 +2,7 @@
   .content {
     padding-bottom: 5%;
     padding-top: 15% !important;
-    padding-left: 22%;
+    padding-left: 5%;
   }
 
   #icons {
@@ -12,12 +12,15 @@
     padding-inline-start: 0px;
     font-size: 20px !important;
   }
-  .bounce h1 {
+  h1 {
     font-size: 45px !important;
   }
   .content {
     padding-left: 5% !important;
     padding-right: 5% !important;
+  }
+  h2 {
+    font-size: 35px !important;
   }
 }
 
@@ -100,5 +103,5 @@ span#icons {
 .content {
   padding-bottom: 5%;
   padding-top: 5%;
-  padding-left: 22%;
+  padding-left: 5%;
 }
