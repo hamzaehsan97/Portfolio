@@ -7,6 +7,12 @@ import styled, { keyframes } from "styled-components";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 export const Content = () => {
+  const styles = {
+    "@media (max-width: 640px)": {
+      display: "none",
+      visibility: "hidden",
+    },
+  };
   const Bounce = styled.div`
     animation: 2s ${keyframes`${bounce}`};
   `;
@@ -71,7 +77,7 @@ export const Content = () => {
             to see some of the projects I've been working on.
           </p>
         </Grid>
-        <Grid item>
+        <Grid item style={styles}>
           <p>
             <span id="icons">
               <SocialIcon url="https://github.com/hamzaehsan97" />

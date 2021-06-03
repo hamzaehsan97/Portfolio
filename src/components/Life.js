@@ -30,6 +30,7 @@ class Life extends Component {
             justify="flex-start"
             alignItems="center"
             direction="column"
+            style={{ paddingTop: 5 + "%" }}
           >
             <Grid item>
               <Typography variant="h2">What is Hamza upto?</Typography>

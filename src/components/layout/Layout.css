@@ -1,4 +1,13 @@
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1356px) {
+  .content {
+    padding-bottom: 5%;
+    padding-top: 15% !important;
+    padding-left: 22%;
+  }
+
+  #icons {
+    display: none;
+  }
   ul {
     padding-inline-start: 0px;
     font-size: 20px !important;
@@ -85,6 +94,7 @@ u#scroll {
 
 span#icons {
   margin-right: 8px;
+  z-index: -100;
 }
 
 .content {

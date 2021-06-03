@@ -2,6 +2,16 @@ import React from "react";
 import "./Layout.css";
 import { Grid, Typography } from "@material-ui/core";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+///
+import { theme } from "./theme";
+
+import { GlobalStyles } from "../../global";
+import { useState, useRef } from "react";
+import { ThemeProvider } from "styled-components";
+import { useOnClickOutside } from "./hooks";
+import { Menu } from "./Menu";
+import { Burger } from "./Burger";
+import FocusLock from "react-focus-lock";
 
 const onMouseOver = (event) => {
   const el = event.target;
@@ -17,6 +27,12 @@ const onMouseOut = (event) => {
 
 export const Header = () => {
   // eslint-disable-next-line
+  const [open, setOpen] = useState(false);
+  const node = useRef();
+  const menuId = "main-menu";
+
+  useOnClickOutside(node, () => setOpen(false));
+
   const styles = {
     fontSize: 22 + "px",
     "@media (max-width: 500px)": {
@@ -25,8 +41,13 @@ export const Header = () => {
   };
 
   return (
-    <Grid container direction="row" justify="flex-end">
-      <Grid item>
+    <Grid
+      container
+      direction="row"
+      justify="flex-end"
+      style={{ display: "block" }}
+    >
+      {/* <Grid item>
         <ul id="nav">
           {" "}
           <li>
@@ -138,8 +159,23 @@ export const Header = () => {
             </Link>
           </li>
         </ul>
+      </Grid> */}
+      <Grid item xs={1}>
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <div ref={node}>
+            <FocusLock disabled={!open}>
+              <Burger
+                open={open}
+                setOpen={setOpen}
+                aria-controls={menuId}
+                id="burger"
+              />
+              <Menu open={open} setOpen={setOpen} id={menuId} />
+            </FocusLock>
+          </div>
+        </ThemeProvider>
       </Grid>
-      <Grid item xs={1}></Grid>
     </Grid>
   );
 };
