@@ -13,25 +13,43 @@ import { white } from "color-name";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { ProjectCard } from "./ProjectCard";
 
+const useStyles = makeStyles((theme) => ({
+  project_row: {
+    "@media(maxWidth: 1300px)": {
+      width: "80%",
+      marginTop: theme.spacing(1),
+      marginLeft: theme.spacing(1),
+      marginRight: theme.spacing(1),
+      display: "flex",
+      flexDirection: "column",
+      justify: "center",
+      alignItems: "center",
+      minWidth: 200,
+    },
+  },
+}));
+
 export const ProjectRow = (props) => {
+  const classes = useStyles();
+
   return (
     <div>
       {/* Container for Projects */}
       <Grid
         container
         className="App"
-        justify="flex-end"
-        alignItems="flex-start"
+        justify="center"
+        alignItems="center"
         direction="row"
         spacing={4}
       >
         <Grid item>
           <Grid
             container
-            className="App"
+            className={classes.project_row}
             justify="flex-end"
             alignItems="flex-start"
-            direction="column"
+            direction="row"
             spacing={6}
           >
             <Grid item>
@@ -49,7 +67,7 @@ export const ProjectRow = (props) => {
                 project={{
                   name: "Speech Recognition CNN",
                   description:
-                    "This project is a speech recognition application built using Convolutional Neural Networks in Python. The project was integrated to a VR language game, VRnacular.",
+                    "This project is a speech recognition application built using Convolutional Neural Networks in Python.",
                   url: "https://github.com/hamzaehsan97/Dupolicity",
                 }}
               />
@@ -72,7 +90,7 @@ export const ProjectRow = (props) => {
             className="App"
             justify="flex-end"
             alignItems="flex-start"
-            direction="column"
+            direction="row"
             spacing={6}
           >
             <Grid item>
@@ -113,7 +131,7 @@ export const ProjectRow = (props) => {
             className="App"
             justify="flex-end"
             alignItems="flex-start"
-            direction="column"
+            direction="row"
             spacing={6}
           >
             <Grid item>
