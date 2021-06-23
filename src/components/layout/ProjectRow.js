@@ -57,10 +57,10 @@ export const ProjectRow = (props) => {
             <Grid item>
               <ProjectCard
                 project={{
-                  name: "Hotline",
+                  name: "Texties",
                   description:
-                    "Hotline is a React based real estate platform focused to the needs of south asian real estate markets. The project was built using React, Node.JS, Firebase and MongoDB.",
-                  url: "https://hotlineassociates.netlify.app/",
+                    "Texties is a full-stack an SMS notes client app. It is built using Next.Js, Flask, PostGreSQL, SQLAlchemy and is hosted on Heroku and Netlify.",
+                  url: "https://texties.netlify.app/",
                 }}
               />
             </Grid>

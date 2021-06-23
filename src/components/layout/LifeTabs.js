@@ -15,13 +15,7 @@ function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
-    <Grid
-      container
-      direction="column"
-      justify="center"
-      alignItems="center"
-      style={{ paddingTop: 5 + "%" }}
-    >
+   
       <div
         role="tabpanel"
         hidden={value !== index}
@@ -35,7 +29,7 @@ function TabPanel(props) {
           </Box>
         )}
       </div>
-    </Grid>
+    
   );
 }
 

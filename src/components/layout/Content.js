@@ -17,7 +17,7 @@ export const Content = () => {
     animation: 2s ${keyframes`${bounce}`};
   `;
   return (
-    <div>
+    <div id="contentDiv">
       <Grid
         container
         direction="column"
@@ -77,7 +77,7 @@ export const Content = () => {
             to see some of the projects I've been working on.
           </p>
         </Grid>
-        <Grid item style={styles}>
+        <Grid item style={styles} className="socialIcons">
           <p>
             <span id="icons">
               <SocialIcon url="https://github.com/hamzaehsan97" />
@@ -88,7 +88,6 @@ export const Content = () => {
             <span id="icons">
               <SocialIcon url="https://twitter.com/MelarkeyWisdom" />
             </span>
-
             <span id="icons">
               <SocialIcon url="https://medium.com/@hamzaehsan75" />
             </span>
