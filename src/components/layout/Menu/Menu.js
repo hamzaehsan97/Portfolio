@@ -84,7 +84,7 @@ const Menu = ({ open, ...props }) => {
           </b>
         </Typography>
       </Link>
-      <Link to="/resume" tabIndex={tabIndex}>
+      <a href="https://texties.netlify.app/" tabIndex={tabIndex}>
         <Typography
           variant="overline"
           display="block"
@@ -97,10 +97,29 @@ const Menu = ({ open, ...props }) => {
             onMouseEnter={(event) => onMouseOver(event)}
             onMouseOut={(event) => onMouseOut(event)}
           >
+            Texties
+          </b>
+        </Typography>
+      </a>
+      {/* <Link to="/resume" tabIndex={tabIndex}> */}
+      <a href="resume.pdf">
+        <Typography
+          variant="overline"
+          display="block"
+          gutterBottom
+          style={styles}
+        >
+          4.{" "}
+          <b
+            style={{ textDecoration: "none", color: "white" }}
+            onMouseEnter={(event) => onMouseOver(event)}
+            onMouseOut={(event) => onMouseOut(event)}
+          >
             Resume
           </b>
         </Typography>
-      </Link>
+      </a>
+      {/* </Link> */}
     </StyledMenu>
   );
 };
