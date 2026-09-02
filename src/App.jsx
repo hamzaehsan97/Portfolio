@@ -1,12 +1,20 @@
-const navigation = ["Home", "Career", "Work", "Writings", "Life"];
+const navigation = ["Home", "Career", "Work", "Writing", "About"];
 
 const career = [
   {
-    company: "NinjaTrader",
-    role: "Full-Stack Engineer",
+    company: "Amazon Web Services",
+    role: "Software Development Engineer",
     period: "2022 — Present",
     summary:
-      "Building product and platform experiences for active traders, from onboarding interfaces to operational systems and critical integrations.",
+      "Building and migrating customer-facing services, with work spanning critical APIs, automated integration testing, AWS Fargate, and resilient multi-region systems.",
+    skills: ["Java", "AWS", "Distributed systems"],
+  },
+  {
+    company: "NinjaTrader",
+    role: "Full-Stack Engineer",
+    period: "2022",
+    summary:
+      "Redesigned onboarding, modernized reporting infrastructure, and integrated critical APIs during the Tradovate platform acquisition.",
     skills: ["React", "Platform engineering", "Data systems"],
   },
   {
@@ -17,25 +25,18 @@ const career = [
       "Developed web applications, analytics tooling, APIs, and performance improvements across the full product stack.",
     skills: ["React", "Python", "Analytics"],
   },
-  {
-    company: "TitletownTech + Microsoft",
-    role: "Software Engineer Intern",
-    period: "2019",
-    summary:
-      "Built machine-learning and speech-recognition prototypes for startup evaluation and language-learning products.",
-    skills: ["Python", "Machine learning", "Prototyping"],
-  },
-  {
-    company: "Lawrence University",
-    role: "Software Engineer Intern",
-    period: "2018 — 2019",
-    summary:
-      "Modernized student-facing portals and integrations while completing a bachelor’s degree in computer science.",
-    skills: ["JavaScript", "APIs", "Web platforms"],
-  },
 ];
 
 const projects = [
+  {
+    name: "StackPilot",
+    type: "AI incident response · Featured",
+    description:
+      "An AI-powered on-call copilot that investigates alerts, connects evidence across code and observability tools, and drafts proposed fixes as pull requests.",
+    url: "https://www.stack-pilot.com/",
+    featured: true,
+    proof: ["100+ engineers", "1,000+ bugs fixed", "15-minute average resolution"],
+  },
   {
     name: "DroneSeek",
     type: "Computer vision",
@@ -71,12 +72,21 @@ const projects = [
       "An R-based study modeling early COVID-19 growth against international travel patterns.",
     url: "https://github.com/hamzaehsan97/VirusGrowthPatterns",
   },
+];
+
+const writing = [
   {
-    name: "College Retention Rates",
-    type: "Data science",
+    label: "Personal notes",
+    title: "Essays and ideas",
+    description: "Occasional writing on software, learning, and building things.",
+    url: "https://medium.com/@hamzaehsan75",
+  },
+  {
+    label: "StackPilot blog",
+    title: "Notes from on-call",
     description:
-      "An exploration of how students’ financial well-being relates to college retention and dropout rates.",
-    url: "https://github.com/hamzaehsan97/CollegeRetentionRates",
+      "Product writing about incident response, engineering debt, and AI-assisted debugging.",
+    url: "https://www.stack-pilot.com/blog",
   },
 ];
 
@@ -118,16 +128,16 @@ function App() {
 
       <main id="main-content">
         <section className="hero" id="home">
-          <p className="eyebrow">Software engineer · Chicago</p>
-          <h1>I build useful software with care.</h1>
+          <p className="eyebrow">Hamza Ehsan · Software engineer · Seattle</p>
+          <h1>Engineer by trade. Curious by default.</h1>
           <p className="hero-copy">
-            I’m Hamza Ehsan, a full-stack engineer focused on clear interfaces,
-            dependable systems, and products that make complicated work feel
-            simpler.
+            I work across cloud infrastructure and product engineering. Lately,
+            I’ve been especially interested in making on-call work less reactive
+            through StackPilot.
           </p>
           <div className="hero-links">
             <a className="primary-link" href="#work">
-              View selected work
+              See what I’m working on
             </a>
             <a
               href={`${import.meta.env.BASE_URL}resume.pdf`}
@@ -143,7 +153,7 @@ function App() {
           <SectionHeading
             number="01"
             title="Career"
-            description="A career spent turning complex product and platform problems into practical software."
+            description="Recent work across cloud services, trading platforms, and full-stack product development."
           />
           <div className="timeline">
             {career.map((item) => (
@@ -170,12 +180,12 @@ function App() {
           <SectionHeading
             number="02"
             title="Selected work"
-            description="A selection of product, mobile, machine-learning, and data projects."
+            description="A few products and experiments that were worth following through."
           />
           <div className="project-grid">
             {projects.map((project, index) => (
               <a
-                className="project-card"
+                className={`project-card${project.featured ? " project-card--featured" : ""}`}
                 href={project.url}
                 key={project.name}
                 target="_blank"
@@ -185,40 +195,54 @@ function App() {
                   <span>{String(index + 1).padStart(2, "0")}</span>
                   <Arrow />
                 </div>
-                <p className="project-type">{project.type}</p>
-                <h3>{project.name}</h3>
-                <p>{project.description}</p>
+                <div className="project-card__content">
+                  <p className="project-type">{project.type}</p>
+                  <h3>{project.name}</h3>
+                  <p>{project.description}</p>
+                  {project.proof && (
+                    <ul className="project-proof" aria-label="StackPilot highlights">
+                      {project.proof.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </a>
             ))}
           </div>
         </section>
 
-        <section className="section" id="writings">
+        <section className="section" id="writing">
           <SectionHeading
             number="03"
-            title="Writings"
-            description="Notes on engineering, products, and the ideas worth keeping."
+            title="Writing"
+            description="A small index of ideas, notes, and product thinking—kept easy to browse."
           />
-          <a
-            className="feature-link"
-            href="https://medium.com/@hamzaehsan75"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div>
-              <p className="project-type">Medium</p>
-              <h3>Essays and notes</h3>
-              <p>Read the longer-form archive on software, learning, and building.</p>
-            </div>
-            <Arrow />
-          </a>
+          <div className="writing-list">
+            {writing.map((item) => (
+              <a
+                className="feature-link"
+                href={item.url}
+                key={item.title}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div>
+                  <p className="project-type">{item.label}</p>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+                <Arrow />
+              </a>
+            ))}
+          </div>
         </section>
 
-        <section className="section" id="life">
+        <section className="section" id="about">
           <SectionHeading
             number="04"
-            title="Beyond the screen"
-            description="The interests that keep the work in perspective."
+            title="Away from the keyboard"
+            description="Cycling, reading, cooking, and the questions that come from studying both computers and people."
           />
           <div className="life-grid">
             <article>
@@ -229,7 +253,7 @@ function App() {
             <article>
               <p className="project-type">Learning</p>
               <h3>Reading</h3>
-              <p>Technology, business, human behavior, and useful contrarian ideas.</p>
+              <p>Technology, philosophy, human behavior, and useful contrarian ideas.</p>
             </article>
             <article>
               <p className="project-type">Making</p>
@@ -238,26 +262,18 @@ function App() {
             </article>
           </div>
 
-          <div className="recognition-grid">
-            <article>
-              <p className="project-type">Education</p>
+          <article className="education-row">
+            <p className="project-type">Education</p>
+            <div>
               <h3>Lawrence University</h3>
-              <p>Bachelor of Computer Science, 2020</p>
-            </article>
-            <article>
-              <p className="project-type">Recognition</p>
-              <h3>Built in good company</h3>
-              <p>
-                MakeHarvard winner · The Pitch winner · DifferenceMaker runner-up
-                · LuLaunch winner
-              </p>
-            </article>
-          </div>
+              <p>Bachelor’s in Computer Science and Philosophy, 2020</p>
+            </div>
+          </article>
         </section>
 
         <section className="contact" aria-labelledby="contact-title">
           <p className="eyebrow">Get in touch</p>
-          <h2 id="contact-title">Have a thoughtful problem to solve?</h2>
+          <h2 id="contact-title">Have an interesting problem—or a good question?</h2>
           <a className="contact-email" href="mailto:hamza-ehsan@outlook.com">
             hamza-ehsan@outlook.com <Arrow />
           </a>
