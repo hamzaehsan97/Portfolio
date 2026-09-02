@@ -1,0 +1,19 @@
+# Hamza Ehsan
+
+Hamza Ehsan is a Seattle-based Software Development Engineer II specializing in distributed systems, cloud infrastructure, and AI platforms.
+
+## Primary pages
+
+- [Career](https://hamzaehsan.com/career/): Engineering experience at AWS, NinjaTrader, and Weidert Group.
+- [Selected work](https://hamzaehsan.com/work/): Software and product projects.
+- [StackPilot](https://hamzaehsan.com/work/stackpilot/): AI-powered on-call incident investigation and remediation.
+- [Writing](https://hamzaehsan.com/writing/): Essays and product writing.
+- [About](https://hamzaehsan.com/about/): Background and education.
+- [Resume](https://hamzaehsan.com/resume/): HTML resume and downloadable PDF.
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/ehsan-hamza)
+- [GitHub](https://github.com/hamzaehsan97)
+- [Medium](https://medium.com/@hamzaehsan75)
+- [StackPilot](https://www.stack-pilot.com/)
