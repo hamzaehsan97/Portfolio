@@ -2,12 +2,12 @@
   "name": "hamza-ehsan-portfolio",
   "version": "2.0.0",
   "private": true,
-  "homepage": "https://hamzaehsan97.github.io/Portfolio",
+  "homepage": "https://hamzaehsan.com",
   "type": "module",
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir .prerender && node scripts/prerender.mjs",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
