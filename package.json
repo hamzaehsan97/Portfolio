@@ -2,7 +2,7 @@
   "name": "hamza-ehsan-portfolio",
   "version": "2.0.0",
   "private": true,
-  "homepage": "https://hamzaehsan.com",
+  "homepage": "https://hamzaehsan97.github.io/Portfolio",
   "type": "module",
   "scripts": {
     "start": "vite",

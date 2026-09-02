@@ -6,6 +6,13 @@ const navigation = [
   { label: "About", href: "/about/" },
 ];
 
+const baseUrl = import.meta.env.BASE_URL;
+
+function internalHref(path) {
+  const relativePath = path.replace(/^\/+/, "");
+  return relativePath ? `${baseUrl}${relativePath}` : baseUrl;
+}
+
 const career = [
   {
     company: "Amazon Web Services",
@@ -160,14 +167,18 @@ function SectionHeading({ number, title, description }) {
 function Header({ pathname }) {
   return (
     <header className="site-header">
-      <a className="wordmark" href="/" aria-label="Hamza Ehsan, home">
+      <a className="wordmark" href={internalHref("/")} aria-label="Hamza Ehsan, home">
         HE
       </a>
       <nav aria-label="Primary navigation">
         {navigation.map((item) => {
           const isActive = item.href === pathname;
           return (
-            <a key={item.label} href={item.href} aria-current={isActive ? "page" : undefined}>
+            <a
+              key={item.label}
+              href={internalHref(item.href)}
+              aria-current={isActive ? "page" : undefined}
+            >
               {item.label}
             </a>
           );
@@ -218,7 +229,7 @@ function CareerSection({ standalone = false }) {
         ))}
       </div>
       {standalone && (
-        <a className="inline-link" href="/resume/">
+        <a className="inline-link" href={internalHref("/resume/")}>
           Read the full résumé <Arrow />
         </a>
       )}
@@ -242,7 +253,7 @@ function WorkSection({ standalone = false }) {
           return (
             <a
               className={`project-card${project.featured ? " project-card--featured" : ""}`}
-              href={project.url}
+              href={external ? project.url : internalHref(project.url)}
               key={project.name}
               target={external ? "_blank" : undefined}
               rel={external ? "noreferrer" : undefined}
@@ -365,10 +376,10 @@ function HomePage() {
           can make on-call work calmer through StackPilot.
         </p>
         <div className="hero-links">
-          <a className="primary-link" href="/work/">
+          <a className="primary-link" href={internalHref("/work/")}>
             See selected work
           </a>
-          <a href="/resume/">
+          <a href={internalHref("/resume/")}>
             Read résumé <Arrow />
           </a>
         </div>
@@ -509,10 +520,15 @@ function ResumePage() {
         description="Six years of experience architecting distributed cloud and GenAI platforms, with cross-team leadership across system architecture, resilience, AI infrastructure, security, operational readiness, and cost optimization."
       >
         <div className="hero-links">
-          <a className="primary-link" href="/resume.pdf" target="_blank" rel="noreferrer">
+          <a
+            className="primary-link"
+            href={internalHref("/resume.pdf")}
+            target="_blank"
+            rel="noreferrer"
+          >
             View PDF <Arrow />
           </a>
-          <a href="/resume.pdf" download="Hamza_Ehsan_SWE_Resume.pdf">
+          <a href={internalHref("/resume.pdf")} download="Hamza_Ehsan_SWE_Resume.pdf">
             Download résumé
           </a>
         </div>
@@ -548,7 +564,7 @@ function NotFoundPage() {
       description="The page you requested does not exist, but the rest of the site is close by."
     >
       <div className="hero-links">
-        <a className="primary-link" href="/">
+        <a className="primary-link" href={internalHref("/")}>
           Return home
         </a>
       </div>
